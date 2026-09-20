@@ -1,6 +1,6 @@
 <?php
 
-//Construção de classes e funções
+//ConstruÃ§Ã£o de classes e funÃ§Ãµes
 
 class Funcionario {
     private string $nome;
@@ -33,6 +33,6 @@ class Funcionario {
 
 $funcionario = new Funcionario("Roberto","Chefe",7000.99);
 
-echo $funcionario->getNome();
-echo $funcionario->getCargo();
-echo $funcionario->getSalario();
+echo $funcionario->getNome() . "<br>";
+echo $funcionario->getCargo() . "<br>";
+echo $funcionario->getSalario() . "<br>";

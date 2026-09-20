@@ -23,7 +23,7 @@ class Funcionario
     }
     public function setCargo(string $novoCargo): void
     {
-        if ($novoCargo == 'Analista' || $novoCargo == 'Assistente' || $novoCargo == 'Coordenador') {
+        if ($novoCargo == 'Analista' OR $novoCargo == 'Assistente' OR $novoCargo == 'Coordenador') {
             $this->cargo = $novoCargo;
         }
     }
@@ -45,19 +45,20 @@ class Funcionario
     public function calcularSalarioLiquido(): float
     {
         // desconto de 11% + 5% extra se > 5000
-        if($this->salario > 5000) {
-            return ($this->salario-($this->salario*0.16));
-        }else{
-            return ($this->salario-($this->salario*0.11));
+        if ($this->salario > 5000) {
+            return ($this->salario - ($this->salario * 0.16));
+        } else {
+            return ($this->salario - ($this->salario * 0.11));
+        }
+    }
+    public function ehElegivelParaBonus(): bool
+    {
+        $valor = $this->calcularSalarioLiquido();
+        // Coordenador E salário líquido > 4000
+        if ($valor > 4000 && $this->cargo == 'Coordenador') {
+            return 1;
+        } else {
+            return 0;
         }
     }
 }
-
-//Testes comprovando funcionamento!
-
-$funcionario = new Funcionario("Roberto","Chefe",7000.99);
-
-echo $funcionario->getNome() . "<br>";
-echo $funcionario->getCargo() . "<br>";
-echo $funcionario->getSalario() . "<br>";
-echo $funcionario->calcularSalarioLiquido() . "<br>";
