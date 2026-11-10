@@ -1,0 +1,23 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "nome": "Testaaaaaa",
+            "quantidade": "15",
+            "preco": 100
+        },
+        {
+            "id": 2,
+            "nome": "Caderninho",
+            "quantidade": "131",
+            "preco": 13123
+        },
+        {
+            "id": 3,
+            "nome": "tetatata",
+            "quantidade": 2,
+            "preco": 13
+        }
+    ],
+    "clientes": []
+}

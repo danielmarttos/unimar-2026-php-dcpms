@@ -31,14 +31,10 @@ echo "--------\n\n";
 include('classes/prod-composto.php');
 // Carrinho: guarda os produtos
  
-// dados do teste:
-// Caderno 12.00 | Caneta 3.50 | Lápis 1.50
-// Kit "Volta às aulas" = Caderno + Caneta + Lápis
-// Mochila 89.90
- 
 $kitaula = new ProdutoComposto('Kit volta as Aulas');
 $kitaula->adicionar($caneta);
 $kitaula->adicionar($caderno);
 $kitaula->adicionar($lapis);
 
-$mochila = new Produto('Mochila',89.90);
+$mochila = new Produto('Mochila', 89.90);
+

@@ -1,0 +1,158 @@
+/* --- RESET E CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333333;
+    padding-bottom: 50px;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    color: white;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* --- LAYOUT DA LINHA (FORMULÁRIO + BOTÃO) --- */
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 15px;
+}
+
+/* Formulário de Busca */
+form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+form label {
+    font-weight: 600;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+form input[type="text"] {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+form input[type="text"]:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Botão de Envio/Submit do Form */
+form input[type="submit"] {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #4338ca;
+}
+
+/* Botão de Adicionar (+) */
+.line button {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.line button:hover {
+    background-color: #059669;
+}
+
+.line button:active {
+    transform: scale(0.95);
+}
+
+/* --- TABELA DE PRODUTOS --- */
+.prod-table {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto 0 auto;
+    background: #ffffff;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+.prod-table th {
+    background-color: #f9fafb;
+    color: #374151;
+    font-weight: 600;
+    text-align: left;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #e5e7eb;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.prod-table td {
+    padding: 14px 20px;
+    color: #4b5563;
+    border-bottom: 1px solid #f3f4f6;
+    font-size: 0.95rem;
+}
+
+/* Efeito zebrado e hover nas linhas da tabela */
+.prod-table tr:nth-child(even) {
+    background-color: #fafbfc;
+}
+
+.prod-table tr:hover {
+    background-color: #f3f4f6;
+}
+
+.prod-table tr:last-child td {
+    border-bottom: none;
+}
